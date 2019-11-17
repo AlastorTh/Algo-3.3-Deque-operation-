@@ -3,11 +3,11 @@
 
 #include <iostream>
 
-template <class Type> // для работы с любым типом
+template <class Type> // РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ Р»СЋР±С‹Рј С‚РёРїРѕРј
 class Deque 
-{  // класс дека
+{  // РєР»Р°СЃСЃ РґРµРєР°
 
-	class Node  // элемент дека
+	class Node  // СЌР»РµРјРµРЅС‚ РґРµРєР°
 	{
 		friend class Deque;
 		Type data;
@@ -17,7 +17,7 @@ class Deque
 
 	public:
 		Node(Type data = Type(), Node* next = nullptr, Node* prev = nullptr)
-			: data(data), next(next), prev(prev) {};  // конструктор узла
+			: data(data), next(next), prev(prev) {};  // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СѓР·Р»Р°
 
 		~Node() { delete next; }
 
@@ -30,12 +30,12 @@ public:
 		Ptr ptr;
 
 	public:
-		Iterator(Ptr ptr = nullptr) : ptr(ptr) {}; //конструктор
+		Iterator(Ptr ptr = nullptr) : ptr(ptr) {}; //РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 
 		T& operator*() { return ptr->data; }
 		T& operator->() { return ptr->data; }
-		void operator++() { ptr = ptr->next; } // префиксный ++
-		Iterator operator++(int) //постфиксный ++ 
+		void operator++() { ptr = ptr->next; } // РїСЂРµС„РёРєСЃРЅС‹Р№ ++
+		Iterator operator++(int) //РїРѕСЃС‚С„РёРєСЃРЅС‹Р№ ++ 
 		{
 			Iterator iter(*this);
 			++(*this);
@@ -51,9 +51,9 @@ private:
 	Node* head, * tail;
 
 public:
-	Deque() : head(nullptr), tail(nullptr) {}; // конструктор дека 
+	Deque() : head(nullptr), tail(nullptr) {}; // РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґРµРєР° 
 
-	void push_front(const Type& value) // добавление в начало 
+	void push_front(const Type& value) // РґРѕР±Р°РІР»РµРЅРёРµ РІ РЅР°С‡Р°Р»Рѕ 
 	{
 		Node* insert = new Node(value, head);
 		if (head)
@@ -114,7 +114,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Deque& d) 
 	{
 		os << "Elements:" << std::endl;
-		for (auto& it : d) // ебола
+		for (auto& it : d) // РµР±РѕР»Р°
 		{
 			os << it << std::endl;
 		}

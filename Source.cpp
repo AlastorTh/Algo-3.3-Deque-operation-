@@ -10,25 +10,25 @@ int main() {
 	setlocale(LC_ALL, "RUS");
 	Deque<int> deque;
 
-	std::cout << "---Ïðîãðàììà ðàáîòû ñ äåêîì---" << std::endl;
-	std::cout << "pushf - Âñòàâêà â íà÷àëî " << std::endl;
-	std::cout << "pushb - Âñòàâêà â êîíåö" << std::endl;
-	std::cout << "popf- âûáîðêà èç íà÷àëà" << std::endl;
-	std::cout << "popb- âûáîðêà èç êîíöà" << std::endl;
+	std::cout << "---ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹ Ñ Ð´ÐµÐºÐ¾Ð¼---" << std::endl;
+	std::cout << "pushf - Ð’ÑÑ‚Ð°Ð²ÐºÐ° Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾ " << std::endl;
+	std::cout << "pushb - Ð’ÑÑ‚Ð°Ð²ÐºÐ° Ð² ÐºÐ¾Ð½ÐµÑ†" << std::endl;
+	std::cout << "popf- Ð²Ñ‹Ð±Ð¾Ñ€ÐºÐ° Ð¸Ð· Ð½Ð°Ñ‡Ð°Ð»Ð°" << std::endl;
+	std::cout << "popb- Ð²Ñ‹Ð±Ð¾Ñ€ÐºÐ° Ð¸Ð· ÐºÐ¾Ð½Ñ†Ð°" << std::endl;
 	std::string action;
 
 	while (std::cin >> action) {
 		if (action == "pushf") 
 		{
 			int value;
-			std::cout << "Ââåäèòå öåëî÷èñëåííîå çíà÷åíèå:";
+			std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:";
 			std::cin >> value;
 			deque.push_front(value);
 		}
 		else if (action == "pushb")
 		{
 			int value;
-			std::cout << "Ââåäèòå öåëî÷èñëåííîå çíà÷åíèå:";
+			std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†ÐµÐ»Ð¾Ñ‡Ð¸ÑÐ»ÐµÐ½Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:";
 			std::cin >> value;
 			deque.push_back(value);
 		}
@@ -45,7 +45,7 @@ int main() {
 		{
 			if (deque.empty()) 
 			{
-				std::cout << "Ñïèñîê ïóñò!" << std::endl;
+				std::cout << "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿ÑƒÑÑ‚!" << std::endl;
 			}
 			std::cout << deque;
 		}
