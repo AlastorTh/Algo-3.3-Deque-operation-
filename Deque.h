@@ -63,7 +63,7 @@ public:
 	}
 	void push_back(const Type& value)
 	{
-		auto insert = new Node(value, nullptr, tail);
+		Node* insert = new Node(value, nullptr, tail);
 		if (tail)
 			tail = tail->next = insert;
 		else
@@ -114,7 +114,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Deque& d) 
 	{
 		os << "Elements:" << std::endl;
-		for (auto& it : d) // ебола
+		for (auto& it : d) // 
 		{
 			os << it << std::endl;
 		}

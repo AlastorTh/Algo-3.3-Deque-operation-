@@ -15,6 +15,8 @@ int main() {
 	std::cout << "pushb - Вставка в конец" << std::endl;
 	std::cout << "popf- выборка из начала" << std::endl;
 	std::cout << "popb- выборка из конца" << std::endl;
+	std::cout << "clear- очистка дека" << std::endl;
+	std::cout << "print - печать" << std::endl;
 	std::string action;
 
 	while (std::cin >> action) {
